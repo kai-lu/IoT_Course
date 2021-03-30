@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Zotero Report</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9Cg==">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_W774TSRA" class="item webpage">
+			<h2>2020-2021年度物联网关键技术与平台创新类、集成创新与融合应用类项目公示</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Web Page</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://www.miit.gov.cn/zwgk/wjgs/art/2021/art_7555d0d601d04c87961e5ecb391ad738.html">https://www.miit.gov.cn/zwgk/wjgs/art/2021/art_7555d0d601d04c87961e5ecb391ad738.html</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/19/2021, 1:34:04 PM</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/19/2021, 1:34:04 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/19/2021, 1:34:04 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_6VZDM5IY">2020-2021年度物联网关键技术与平台创新类、集成创新与融合应用类项目公示					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_GALEEHX6" class="item webpage">
+			<h2>A Comprehensive Survey on Internet of Things (IoT) Toward 5G Wireless Systems</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Web Page</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Recently, wireless technologies have been growing actively all
+ around the world. In the context of wireless technology, 
+fifth-generation (5G) technology has become a most challenging and 
+interesting topic in wireless research. This article provides an 
+overview of the Internet of Things (IoT) in 5G wireless systems. IoT in 
+the 5G system will be a game changer in the future generation. It will 
+open a door for new wireless architecture and smart services. Recent 
+cellular network LTE (4G) will not be sufficient and efficient to meet 
+the demands of multiple device connectivity and high data rate, more 
+bandwidth, low-latency quality of service (QoS), and low interference. 
+To address these challenges, we consider 5G as the most promising 
+technology. We provide a detailed overview of challenges and vision of 
+various communication industries in 5G IoT systems. The different layers
+ in 5G IoT systems are discussed in detail. This article provides a 
+comprehensive review on emerging and enabling technologies related to 
+the 5G system that enables IoT. We consider the technology drivers for 
+5G wireless technology, such as 5G new radio (NR), 
+multiple-input-multiple-output antenna with the beamformation 
+technology, mm-wave commutation technology, heterogeneous networks 
+(HetNets), the role of augmented reality (AR) in IoT, which are 
+discussed in detail. We also provide a review on low-power wide-area 
+networks (LPWANs), security challenges, and its control measure in the 
+5G IoT scenario. This article introduces the role of AR in the 5G IoT 
+scenario. This article also discusses the research gaps and future 
+directions. The focus is also on application areas of IoT in 5G systems.
+ We, therefore, outline some of the important research directions in 5G 
+IoT.</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en-US</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://ieeexplore.ieee.org/document/8879484">https://ieeexplore.ieee.org/document/8879484</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/23/2021, 4:09:15 PM</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/23/2021, 4:09:15 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/23/2021, 4:09:15 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_APERUG4B">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_FWKQYT5A" class="item conferencePaper">
+			<h2>A survey on the challenges and opportunities of the Internet of Things (IoT)</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Conference Paper</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>L. Farhan</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>S. T. Shukur</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>A. E. Alissa</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Alrweg</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>U. Raza</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>R. Kharel</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Internet of Things (IoT) is a rapidly growing technology with a
+ wide range of applications in various fields. It has unified a plethora
+ of devices and infrastructure under the same umbrella and is considered
+ by many technologies leaders as the network of the future (NoF). IoT 
+connects heterogeneous devices that provide sensing, control, actuation,
+ and monitoring activities for smarter environments. Smart IoT devices 
+or objects are characterized with a unique identifier to transfer data 
+over the network without human intervention. IoT is expected to further 
+extend the boundaries of the autonomous world with advanced connectivity
+ of physical entities, systems, services. However, there are some 
+serious obstacles and challenges, which must be resolved before the full
+ potential of IoT is realized. The focus of this study is to discuss the
+ key drivers of change, challenges that may slow the adoption of IoT and
+ the potential of the internet of things technology.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>December 2017</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>ISSN: 2156-8073</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1-5</td>
+					</tr>
+					<tr>
+					<th>Proceedings Title</th>
+						<td>2017 Eleventh International Conference on Sensing Technology (ICST)</td>
+					</tr>
+					<tr>
+					<th>Conference Name</th>
+						<td>2017 Eleventh International Conference on Sensing Technology (ICST)</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/ICSensT.2017.8304465">10.1109/ICSensT.2017.8304465</a></td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/23/2021, 4:04:56 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/23/2021, 4:04:56 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Internet of Things</li>
+					<li>Sensors</li>
+					<li>Internet of Things (IoT)</li>
+					<li>Wireless sensor networks</li>
+					<li>Security</li>
+					<li>Future Challenges</li>
+					<li>Future Network</li>
+					<li>network of the future</li>
+					<li>NoF</li>
+					<li>Peer-to-peer computing</li>
+					<li>Protocols</li>
+					<li>Routing</li>
+					<li>smart IoT devices</li>
+					<li>Wireless Sensor Network (WSN)</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_SY9BLA8W">farhan et al_2017_a survey on the challenges and opportunities of the internet of things (iot).pdf					</li>
+					<li id="item_8MLUEBGV">IEEE Xplore Abstract Record					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_S2WZ7ARN" class="item journalArticle">
+			<h2>Internet of Things: Survey on Security and Privacy</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Diego M. Mendez</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Ioannis Papapanagiotou</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Baijian Yang</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>The Internet of Things (IoT) is intended for ubiquitous 
+connectivity among different entities or "things". While its purpose is 
+to provide effective and efficient solutions, security of the devices 
+and network is a challenging issue. The number of devices connected 
+along with the ad-hoc nature of the system further exacerbates the 
+situation. Therefore, security and privacy has emerged as a significant 
+challenge for the IoT. In this paper,we aim to provide a thorough survey
+ related to the privacy and security challenges of the IoT. This 
+document addresses these challenges from the perspective of technologies
+ and architecture used. This work focuses also in IoT intrinsic 
+vulnerabilities as well as the security challenges of various layers 
+based on the security principles of data confidentiality, integrity and 
+availability. This survey analyzes articles published for the IoT at the
+ time and relates it to the security conjuncture of the field and its 
+projection to the future.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2017-07-10</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Internet of Things</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>arXiv.org</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://arxiv.org/abs/1707.01879">http://arxiv.org/abs/1707.01879</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/23/2021, 4:03:33 PM</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>arXiv: 1707.01879</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>arXiv:1707.01879 [cs]</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1080/19393555.2018.1458258">10.1080/19393555.2018.1458258</a></td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/23/2021, 4:03:33 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/23/2021, 4:03:33 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer Science - Cryptography and Security</li>
+					<li>K.6.m</li>
+				</ul>
+				<h3 class="notes">Notes:</h3>
+				<ul class="notes">
+					<li id="item_RJPW9U5N">
+<p class="plaintext">Comment: 16 pages, 3 figures</p>
+					</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_TGZSFDR8">arXiv.org Snapshot					</li>
+					<li id="item_2T3YV2BH">mendez et al_2017_internet of things.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_7L88JLG7" class="item conferencePaper">
+			<h2>The Internet of Things — A comprehensive survey</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Conference Paper</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>P. V. Paul</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>R. Saraswathi</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Internet of Things (IoT) is an interconnection among the 
+objects, equipped with ubiquitous intelligence, used by human in 
+day-today life. A large scale of advancement in wireless technology, 
+sensing technology and communication technology takes the efficacy of 
+the IoT to the next level. Many papers have studied the different 
+concepts of IoT but a single-stop work on complete IoT technology study 
+is still area of research. In this perspective, a comprehensive survey 
+on IoT and its enabling technologies are discussed in the work. This 
+paper also concentrates on the service layered architectures with its 
+protocols and different perspectives of IoT. This work would stand as 
+single-point complete study for the researchers and to derive new 
+problem identifications in the domain.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>March 2017</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>421-426</td>
+					</tr>
+					<tr>
+					<th>Proceedings Title</th>
+						<td>2017 International Conference on Computation of Power, Energy Information and Commuincation (ICCPEIC)</td>
+					</tr>
+					<tr>
+					<th>Conference Name</th>
+						<td>2017 International Conference on Computation of Power, Energy Information and Commuincation (ICCPEIC)</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/ICCPEIC.2017.8290405">10.1109/ICCPEIC.2017.8290405</a></td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/23/2021, 4:06:54 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/23/2021, 4:06:54 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Computer architecture</li>
+					<li>Internet of Things</li>
+					<li>Cloud computing</li>
+					<li>Intelligent sensors</li>
+					<li>protocols</li>
+					<li>Protocols</li>
+					<li>Actuators</li>
+					<li>cloudlets</li>
+					<li>communication technology</li>
+					<li>internet of things</li>
+					<li>IoT factors</li>
+					<li>IoT technology</li>
+					<li>ubiquitous intelligence</li>
+					<li>wireless technology</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_UQ4ZNLN7">IEEE Xplore Abstract Record					</li>
+					<li id="item_GNYRFDNK">paul&amp;saraswathi_2017_the internet of things — a comprehensive survey.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_BPUUMZCV" class="item webpage">
+			<h2>工业和信息化部办公厅关于深入推进移动物联网全面发展的通知_其他_中国政府网</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Web Page</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://www.gov.cn/zhengce/zhengceku/2020-05/08/content_5509672.htm">http://www.gov.cn/zhengce/zhengceku/2020-05/08/content_5509672.htm</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/19/2021, 1:28:58 PM</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/19/2021, 1:28:58 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/19/2021, 1:28:58 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_Z467F8AL">工业和信息化部办公厅关于深入推进移动物联网全面发展的通知_其他_中国政府网					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>
