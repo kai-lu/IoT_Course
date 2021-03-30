@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Zotero Report</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9Cg==">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_LK879PM8" class="item journalArticle">
+			<h2>A Survey on Internet of Things: Architecture, Enabling Technologies, Security and Privacy, and Applications</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>J. Lin</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>W. Yu</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>N. Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>X. Yang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>H. Zhang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>W. Zhao</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Fog/edge computing has been proposed to be integrated with 
+Internet of Things (IoT) to enable computing services devices deployed 
+at network edge, aiming to improve the user's experience and resilience 
+of the services in case of failures. With the advantage of distributed 
+architecture and close to end-users, fog/edge computing can provide 
+faster response and greater quality of service for IoT applications. 
+Thus, fog/edge computing-based IoT becomes future infrastructure on IoT 
+development. To develop fog/edge computing-based IoT infrastructure, the
+ architecture, enabling techniques, and issues related to IoT should be 
+investigated first, and then the integration of fog/edge computing and 
+IoT should be explored. To this end, this paper conducts a comprehensive
+ overview of IoT with respect to system architecture, enabling 
+technologies, security and privacy issues, and present the integration 
+of fog/edge computing and IoT, and applications. Particularly, this 
+paper first explores the relationship between cyber-physical systems and
+ IoT, both of which play important roles in realizing an intelligent 
+cyber-physical world. Then, existing architectures, enabling 
+technologies, and security and privacy issues in IoT are presented to 
+enhance the understanding of the state of the art IoT development. To 
+investigate the fog/edge computing-based IoT, this paper also 
+investigate the relationship between IoT and fog/edge computing, and 
+discuss issues in fog/edge computing-based IoT. Finally, several 
+applications, including the smart grid, smart transportation, and smart 
+cities, are presented to demonstrate how fog/edge computing-based IoT to
+ be implemented in real-world applications.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>October 2017</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>A Survey on Internet of Things</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Internet of Things Journal</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>4</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1125-1142</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Internet of Things Journal</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/JIOT.2017.2683200">10.1109/JIOT.2017.2683200</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>5</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>2327-4662</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/4/2021, 2:52:03 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/4/2021, 2:52:03 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>cellular radio</li>
+					<li>Computer architecture</li>
+					<li>Internet of Things</li>
+					<li>IoT</li>
+					<li>3G mobile communication</li>
+					<li>data privacy</li>
+					<li>Applications</li>
+					<li>computing services devices</li>
+					<li>cyber-physical systems</li>
+					<li>distributed architecture</li>
+					<li>enabling technologies</li>
+					<li>fog/edge computing</li>
+					<li>intelligent cyber-physical world</li>
+					<li>internet of Things (IoT)</li>
+					<li>mobile computing</li>
+					<li>network edge</li>
+					<li>Privacy</li>
+					<li>Security</li>
+					<li>security and privacy</li>
+					<li>security privacy issues</li>
+					<li>Smart cities</li>
+					<li>Smart grids</li>
+					<li>Smart transportation</li>
+					<li>system architecture</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_IJR6WQ4P">IEEE Xplore Abstract Record					</li>
+					<li id="item_SEG3FXZG">lin et al_2017_a survey on internet of things.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_DVL2KX46" class="item webpage">
+			<h2>Define IoT - IEEE Internet of Things</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Web Page</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Learn how the Internet of Things will interconnect all things to shape the evolution of the Future Internet.</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en-gb</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="https://iot.ieee.org/definition.html">https://iot.ieee.org/definition.html</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/9/2021, 8:57:32 PM</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/9/2021, 8:57:32 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/9/2021, 8:57:32 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_T7YRUY9E">Snapshot					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_XQ834S5L" class="item journalArticle">
+			<h2>How Can Heterogeneous Internet of Things Build Our Future: A Survey</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>T. Qiu</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>N. Chen</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>K. Li</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Atiquzzaman</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>W. Zhao</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Heterogeneous Internet of Things (HetIoT) is an emerging 
+research field that has strong potential to transform both our 
+understanding of fundamental computer science principles and our future 
+living. HetIoT is being employed in increasing number of areas, such as 
+smart home, smart city, intelligent transportation, environmental 
+monitoring, security systems, and advanced manufacturing. Therefore, 
+relaying on strong application fields, HetIoT will be filled in our life
+ and provide a variety of convenient services for our future. The 
+network architectures of IoT are intrinsically heterogeneous, including 
+wireless sensor network, wireless fidelity network, wireless mesh 
+network, mobile communication network, and vehicular network. In each 
+network unit, smart devices utilize appropriate communication methods to
+ integrate digital information and physical objects, which provide users
+ with new exciting applications and services. However, the complexity of
+ application requirements, the heterogeneity of network architectures 
+and communication technologies impose many challenges in developing 
+robust HetIoT applications. This paper proposes a four-layer HetIoT 
+architecture consisting of sensing, networking, cloud computing, and 
+applications. Then, the state of the art in HetIoT research and 
+applications have been discussed. This paper also suggests several 
+potential solutions to address the challenges facing future HetIoT, 
+including self-organizing, big data transmission, privacy protection, 
+data integration and processing in large-scale HetIoT.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>thirdquarter 2018</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>How Can Heterogeneous Internet of Things Build Our Future</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Communications Surveys Tutorials</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>20</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>2011-2027</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Communications Surveys Tutorials</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/COMST.2018.2803740">10.1109/COMST.2018.2803740</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>3</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1553-877X</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/4/2021, 2:53:29 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/4/2021, 2:53:29 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>wireless LAN</li>
+					<li>Temperature sensors</li>
+					<li>Computer architecture</li>
+					<li>Internet of Things</li>
+					<li>Cloud computing</li>
+					<li>cloud computing</li>
+					<li>communication technologies</li>
+					<li>Wireless sensor networks</li>
+					<li>advanced manufacturing</li>
+					<li>application requirements</li>
+					<li>applications</li>
+					<li>architectures</li>
+					<li>Big Data</li>
+					<li>challenges</li>
+					<li>communication methods</li>
+					<li>convenient services</li>
+					<li>data privacy</li>
+					<li>environmental monitoring</li>
+					<li>four-layer HetIoT architecture</li>
+					<li>future living</li>
+					<li>Gas detectors</li>
+					<li>heterogeneous Internet of Things</li>
+					<li>Heterogeneous Internet of Things</li>
+					<li>HetIoT research</li>
+					<li>intelligent transportation</li>
+					<li>mobile communication network</li>
+					<li>network architectures</li>
+					<li>network protocols</li>
+					<li>network unit</li>
+					<li>potential solutions</li>
+					<li>robust HetIoT application</li>
+					<li>security systems</li>
+					<li>smart city</li>
+					<li>smart devices</li>
+					<li>smart home</li>
+					<li>strong application fields</li>
+					<li>vehicular ad hoc networks</li>
+					<li>vehicular network</li>
+					<li>wireless fidelity network</li>
+					<li>wireless mesh network</li>
+					<li>wireless mesh networks</li>
+					<li>wireless sensor network</li>
+					<li>wireless sensor networks</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_ZBNLNEU6">IEEE Xplore Abstract Record					</li>
+					<li id="item_H5IIT8PV">qiu et al_2018_how can heterogeneous internet of things build our future.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_JJVLG4U2" class="item journalArticle">
+			<h2>Internet of Things for Smart Cities</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>A. Zanella</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>N. Bui</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>A. Castellani</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>L. Vangelista</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Zorzi</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>The Internet of Things (IoT) shall be able to incorporate 
+transparently and seamlessly a large number of different and 
+heterogeneous end systems, while providing open access to selected 
+subsets of data for the development of a plethora of digital services. 
+Building a general architecture for the IoT is hence a very complex 
+task, mainly because of the extremely large variety of devices, link 
+layer technologies, and services that may be involved in such a system. 
+In this paper, we focus specifically to an urban IoT system that, while 
+still being quite a broad category, are characterized by their specific 
+application domain. Urban IoTs, in fact, are designed to support the 
+Smart City vision, which aims at exploiting the most advanced 
+communication technologies to support added-value services for the 
+administration of the city and for the citizens. This paper hence 
+provides a comprehensive survey of the enabling technologies, protocols,
+ and architecture for an urban IoT. Furthermore, the paper will present 
+and discuss the technical solutions and best-practice guidelines adopted
+ in the Padova Smart City project, a proof-of-concept deployment of an 
+IoT island in the city of Padova, Italy, performed in collaboration with
+ the city municipality.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>February 2014</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Internet of Things Journal</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>22-32</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Internet of Things Journal</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/JIOT.2014.2306328">10.1109/JIOT.2014.2306328</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>1</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>2327-4662</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/4/2021, 2:44:14 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/4/2021, 2:44:14 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Internet of Things</li>
+					<li>Internet</li>
+					<li>protocols</li>
+					<li>6lowPAN</li>
+					<li>advanced communication technology</li>
+					<li>Business</li>
+					<li>Constrained Application Protocol (CoAP)</li>
+					<li>digital services</li>
+					<li>Efficient XML Interchange (EXI)</li>
+					<li>heterogeneous end systems</li>
+					<li>IEEE 802.15 Standards</li>
+					<li>link layer technology</li>
+					<li>Monitoring</li>
+					<li>network architecture</li>
+					<li>Padova smart city project</li>
+					<li>sensor system integration</li>
+					<li>service functions and management</li>
+					<li>Smart buildings</li>
+					<li>Smart Cities</li>
+					<li>Smart City vision</li>
+					<li>Smart homes</li>
+					<li>testbed and trials</li>
+					<li>Urban areas</li>
+					<li>urban IoT system</li>
+					<li>value-addedservices</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_CUQFZ578">IEEE Xplore Abstract Record					</li>
+					<li id="item_VTRKVSFT">zanella et al_2014_internet of things for smart cities.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_BDS8IAG2" class="item journalArticle">
+			<h2>Internet of Things in Industries: A Survey</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>L. D. Xu</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>W. He</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>S. Li</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Internet of Things (IoT) has provided a promising opportunity 
+to build powerful industrial systems and applications by leveraging the 
+growing ubiquity of radio-frequency identification (RFID), and wireless,
+ mobile, and sensor devices. A wide range of industrial IoT applications
+ have been developed and deployed in recent years. In an effort to 
+understand the development of IoT in industries, this paper reviews the 
+current research of IoT, key enabling technologies, major IoT 
+applications in industries, and identifies research trends and 
+challenges. A main contribution of this review paper is that it 
+summarizes the current state-of-the-art IoT in industries 
+systematically.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>November 2014</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Internet of Things in Industries</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Transactions on Industrial Informatics</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>10</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>2233-2243</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Transactions on Industrial Informatics</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/TII.2014.2300753">10.1109/TII.2014.2300753</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>4</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1941-0050</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/4/2021, 2:46:33 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/4/2021, 2:46:33 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Wireless communication</li>
+					<li>mobile handsets</li>
+					<li>wireless devices</li>
+					<li>Internet of Things</li>
+					<li>radiofrequency identification</li>
+					<li>Internet of things</li>
+					<li>Radiofrequency identification</li>
+					<li>RFID</li>
+					<li>Big data</li>
+					<li>Big data analytics</li>
+					<li>engineering computing</li>
+					<li>enterprise systems</li>
+					<li>industrial informatics</li>
+					<li>industrial IoT applications</li>
+					<li>industrial systems</li>
+					<li>information and communications technology (ICT)</li>
+					<li>internet of things (IoT)</li>
+					<li>mobile devices</li>
+					<li>near field communications</li>
+					<li>radio-frequency identification</li>
+					<li>radio-frequency identification (RFID)</li>
+					<li>sensor devices</li>
+					<li>Service-oriented architecture</li>
+					<li>ubiquitous computing</li>
+					<li>Wireless sensor networks</li>
+					<li>wireless sensor networks (WSNs)</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_F7YQW77K">IEEE Xplore Abstract Record					</li>
+					<li id="item_HUBD3PD8">xu et al_2014_internet of things in industries.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_UL4E396A" class="item journalArticle">
+			<h2>Internet of Things: A Survey on Enabling Technologies, Protocols, and Applications</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>A. Al-Fuqaha</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Guizani</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Mohammadi</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Aledhari</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Ayyash</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This paper provides an overview of the Internet of Things 
+(IoT) with emphasis on enabling technologies, protocols, and application
+ issues. The IoT is enabled by the latest developments in RFID, smart 
+sensors, communication technologies, and Internet protocols. The basic 
+premise is to have smart sensors collaborate directly without human 
+involvement to deliver a new class of applications. The current 
+revolution in Internet, mobile, and machine-to-machine (M2M) 
+technologies can be seen as the first phase of the IoT. In the coming 
+years, the IoT is expected to bridge diverse technologies to enable new 
+applications by connecting physical objects together in support of 
+intelligent decision making. This paper starts by providing a horizontal
+ overview of the IoT. Then, we give an overview of some technical 
+details that pertain to the IoT enabling technologies, protocols, and 
+applications. Compared to other survey papers in the field, our 
+objective is to provide a more thorough summary of the most relevant 
+protocols and application issues to enable researchers and application 
+developers to get up to speed quickly on how the different protocols fit
+ together to deliver desired functionalities without having to go 
+through RFCs and the standards specifications. We also provide an 
+overview of some of the key IoT challenges presented in the recent 
+literature and provide a summary of related research work. Moreover, we 
+explore the relation between the IoT and other emerging technologies 
+including big data analytics and cloud and fog computing. We also 
+present the need for better horizontal integration among IoT services. 
+Finally, we present detailed service use-cases to illustrate how the 
+different protocols presented in the paper fit together to deliver 
+desired IoT services.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>Fourthquarter 2015</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Internet of Things</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Communications Surveys Tutorials</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>17</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>2347-2376</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Communications Surveys Tutorials</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/COMST.2015.2444095">10.1109/COMST.2015.2444095</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>4</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1553-877X</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/4/2021, 2:44:57 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/4/2021, 2:44:57 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Mobile communication</li>
+					<li>mobile communication</li>
+					<li>Computer architecture</li>
+					<li>Internet of Things</li>
+					<li>IoT</li>
+					<li>radiofrequency identification</li>
+					<li>Internet of Things (IoT)</li>
+					<li>Internet of things</li>
+					<li>Radiofrequency identification</li>
+					<li>AMQP</li>
+					<li>big data analytics</li>
+					<li>cloud computing</li>
+					<li>CoAP</li>
+					<li>communication technologies</li>
+					<li>DDS</li>
+					<li>fog computing</li>
+					<li>intelligent decision making</li>
+					<li>Intelligent sensors</li>
+					<li>Internet protocols</li>
+					<li>IoT gateway</li>
+					<li>IoT Gateway</li>
+					<li>M2M technologies</li>
+					<li>machine-to-machine</li>
+					<li>mDNS</li>
+					<li>MQTT</li>
+					<li>protocols</li>
+					<li>RFID</li>
+					<li>smart sensors</li>
+					<li>XMPP</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_99MKT8R4">al-fuqaha et al_2015_internet of things.pdf					</li>
+					<li id="item_V3QQJGY3">IEEE Xplore Abstract Record					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_25BXCQEZ" class="item journalArticle">
+			<h2>Multimedia Internet of Things: A Comprehensive Survey</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>A. Nauman</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Y. A. Qadri</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. Amjad</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Y. B. Zikria</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>M. K. Afzal</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>S. W. Kim</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>The immense increase in multimedia-on-demand traffic that 
+refers to audio, video, and images, has drastically shifted the vision 
+of the Internet of Things (IoT) from scalar to Multimedia Internet of 
+Things (M-IoT). IoT devices are constrained in terms of energy, 
+computing, size, and storage memory. Delay-sensitive and 
+bandwidth-hungry multimedia applications over constrained IoT networks 
+require revision of IoT architecture for M-IoT. This paper provides a 
+comprehensive survey of M-IoT with an emphasis on architecture, 
+protocols, and applications. This article starts by providing a 
+horizontal overview of the IoT. Then, we discuss the issues considering 
+the characteristics of multimedia and provide a summary of related M-IoT
+ architectures. Various multimedia applications supported by IoT are 
+surveyed, and numerous use cases related to road traffic management, 
+security, industry, and health are illustrated to show how different 
+M-IoT applications are revolutionizing human life. We explore the 
+importance of Quality-of-Experience (QoE) and Quality-of-Service (QoS) 
+for multimedia transmission over IoT. Moreover, we explore the 
+limitations of IoT for multimedia computing and present the relationship
+ between the M-IoT and emerging technologies including event processing,
+ feature extraction, cloud computing, Fog/Edge computing and 
+Software-Defined-Networks (SDNs). We also present the need for better 
+routing and Physical-Medium Access Control (PHY-MAC) protocols for 
+M-IoT. Finally, we present a detailed discussion on the open research 
+issues and several potential research areas related to emerging 
+multimedia communication in IoT.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>2020</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Multimedia Internet of Things</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Access</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>8</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>8202-8250</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Access</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/ACCESS.2020.2964280">10.1109/ACCESS.2020.2964280</a></td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>2169-3536</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/4/2021, 2:55:07 PM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/4/2021, 2:55:07 PM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>telecommunication traffic</li>
+					<li>Computer architecture</li>
+					<li>Internet of Things</li>
+					<li>access protocols</li>
+					<li>QoE</li>
+					<li>QoS</li>
+					<li>quality of experience</li>
+					<li>quality of service</li>
+					<li>Streaming media</li>
+					<li>bandwidth-hungry multimedia applications</li>
+					<li>delay-sensitive multimedia applications</li>
+					<li>Internet of Multimedia Things (IoMT)</li>
+					<li>IoT devices</li>
+					<li>M-IoT architectures</li>
+					<li>medium access control (MAC)</li>
+					<li>multimedia communication</li>
+					<li>Multimedia communication</li>
+					<li>multimedia computing</li>
+					<li>multimedia Internet of Things</li>
+					<li>Multimedia Internet of Things (M-IoT)</li>
+					<li>multimedia routing</li>
+					<li>multimedia transmission</li>
+					<li>multimedia-on-demand traffic</li>
+					<li>PHY-MAC protocols</li>
+					<li>physical-medium access control protocols</li>
+					<li>Quality of service</li>
+					<li>Quality-of-Experience (QoE)</li>
+					<li>Quality-of-Service (QoS)</li>
+					<li>synchronisation</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_A9WTYARB">IEEE Xplore Abstract Record					</li>
+					<li id="item_ZU49CXVC">nauman et al_2020_multimedia internet of things.pdf					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>
