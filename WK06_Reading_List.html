@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Zotero Report</title>
+		<link rel="stylesheet" type="text/css" href="data:text/css;base64,Ym9keSB7CgliYWNrZ3JvdW5kOiB3aGl0ZTsKfQoKYSB7Cgl0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTsKfQoKYm9keSB7CglwYWRkaW5nOiAwOwp9Cgp1bC5yZXBvcnQgbGkuaXRlbSB7Cglib3JkZXItdG9wOiA0cHggc29saWQgIzU1NTsKCXBhZGRpbmctdG9wOiAxZW07CglwYWRkaW5nLWxlZnQ6IDFlbTsKCXBhZGRpbmctcmlnaHQ6IDFlbTsKCW1hcmdpbi1ib3R0b206IDJlbTsKfQoKaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7Cglmb250LXdlaWdodDogbm9ybWFsOwp9CgpoMiB7CgltYXJnaW46IDAgMCAuNWVtOwp9CgpoMi5wYXJlbnRJdGVtIHsKCWZvbnQtd2VpZ2h0OiBib2xkOwoJZm9udC1zaXplOiAxZW07CglwYWRkaW5nOiAwIDAgLjVlbTsKCWJvcmRlci1ib3R0b206IDFweCBzb2xpZCAjY2NjOwp9CgovKiBJZiBjb21iaW5pbmcgY2hpbGRyZW4sIGRpc3BsYXkgcGFyZW50IHNsaWdodGx5IGxhcmdlciAqLwp1bC5yZXBvcnQuY29tYmluZUNoaWxkSXRlbXMgaDIucGFyZW50SXRlbSB7Cglmb250LXNpemU6IDEuMWVtOwoJcGFkZGluZy1ib3R0b206IC43NWVtOwoJbWFyZ2luLWJvdHRvbTogLjRlbTsKfQoKaDIucGFyZW50SXRlbSAudGl0bGUgewoJZm9udC13ZWlnaHQ6IG5vcm1hbDsKfQoKaDMgewoJbWFyZ2luLWJvdHRvbTogLjZlbTsKCWZvbnQtd2VpZ2h0OiBib2xkICFpbXBvcnRhbnQ7Cglmb250LXNpemU6IDFlbTsKCWRpc3BsYXk6IGJsb2NrOwp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0aCB7Cgl2ZXJ0aWNhbC1hbGlnbjogdG9wOwoJdGV4dC1hbGlnbjogcmlnaHQ7Cgl3aWR0aDogMTUlOwoJd2hpdGUtc3BhY2U6IG5vd3JhcDsKfQoKdGQgewoJcGFkZGluZy1sZWZ0OiAuNWVtOwp9CgoKdWwucmVwb3J0LCB1bC5ub3RlcywgdWwudGFncyB7CglsaXN0LXN0eWxlOiBub25lOwoJbWFyZ2luLWxlZnQ6IDA7CglwYWRkaW5nLWxlZnQ6IDA7Cn0KCi8qIFRhZ3MgKi8KaDMudGFncyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC50YWdzIHsKCWxpbmUtaGVpZ2h0OiAxLjc1ZW07CglsaXN0LXN0eWxlOiBub25lOwp9Cgp1bC50YWdzIGxpIHsKCWRpc3BsYXk6IGlubGluZTsKfQoKdWwudGFncyBsaTpub3QoOmxhc3QtY2hpbGQpOmFmdGVyIHsKCWNvbnRlbnQ6ICcsICc7Cn0KCgovKiBDaGlsZCBub3RlcyAqLwpoMy5ub3RlcyB7Cglmb250LXNpemU6IDEuMWVtOwp9Cgp1bC5ub3RlcyB7CgltYXJnaW4tYm90dG9tOiAxLjJlbTsKfQoKdWwubm90ZXMgPiBsaTpmaXJzdC1jaGlsZCBwIHsKCW1hcmdpbi10b3A6IDA7Cn0KCnVsLm5vdGVzID4gbGkgewoJcGFkZGluZzogLjdlbSAwOwp9Cgp1bC5ub3RlcyA+IGxpOm5vdCg6bGFzdC1jaGlsZCkgewoJYm9yZGVyLWJvdHRvbTogMXB4ICNjY2Mgc29saWQ7Cn0KCgp1bC5ub3RlcyA+IGxpIHA6Zmlyc3QtY2hpbGQgewoJbWFyZ2luLXRvcDogMDsKfQoKdWwubm90ZXMgPiBsaSBwOmxhc3QtY2hpbGQgewoJbWFyZ2luLWJvdHRvbTogMDsKfQoKLyogQWRkIHF1b3RhdGlvbiBtYXJrcyBhcm91bmQgYmxvY2txdW90ZSAqLwp1bC5ub3RlcyA+IGxpIGJsb2NrcXVvdGUgcDpub3QoOmVtcHR5KTpiZWZvcmUsCmxpLm5vdGUgYmxvY2txdW90ZSBwOm5vdCg6ZW1wdHkpOmJlZm9yZSB7Cgljb250ZW50OiAn4oCcJzsKfQoKdWwubm90ZXMgPiBsaSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciwKbGkubm90ZSBibG9ja3F1b3RlIHA6bm90KDplbXB0eSk6bGFzdC1jaGlsZDphZnRlciB7Cgljb250ZW50OiAn4oCdJzsKfQoKLyogUHJlc2VydmUgd2hpdGVzcGFjZSBvbiBwbGFpbnRleHQgbm90ZXMgKi8KdWwubm90ZXMgbGkgcC5wbGFpbnRleHQsIGxpLm5vdGUgcC5wbGFpbnRleHQsIGRpdi5ub3RlIHAucGxhaW50ZXh0IHsKCXdoaXRlLXNwYWNlOiBwcmUtd3JhcDsKfQoKLyogRGlzcGxheSB0YWdzIHdpdGhpbiBjaGlsZCBub3RlcyBpbmxpbmUgKi8KdWwubm90ZXMgaDMudGFncyB7CglkaXNwbGF5OiBpbmxpbmU7Cglmb250LXNpemU6IDFlbTsKfQoKdWwubm90ZXMgaDMudGFnczphZnRlciB7Cgljb250ZW50OiAnICc7Cn0KCnVsLm5vdGVzIHVsLnRhZ3MgewoJZGlzcGxheTogaW5saW5lOwp9Cgp1bC5ub3RlcyB1bC50YWdzIGxpOm5vdCg6bGFzdC1jaGlsZCk6YWZ0ZXIgewoJY29udGVudDogJywgJzsKfQoKCi8qIENoaWxkIGF0dGFjaG1lbnRzICovCmgzLmF0dGFjaG1lbnRzIHsKCWZvbnQtc2l6ZTogMS4xZW07Cn0KCnVsLmF0dGFjaG1lbnRzIGxpIHsKCXBhZGRpbmctdG9wOiAuNWVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSB7CgltYXJnaW4tbGVmdDogMmVtOwp9Cgp1bC5hdHRhY2htZW50cyBkaXYubm90ZSBwOmZpcnN0LWNoaWxkIHsKCW1hcmdpbi10b3A6IC43NWVtOwp9Cg==">
+		<link rel="stylesheet" type="text/css" media="screen,projection" href="data:text/css;base64,LyogR2VuZXJpYyBzdHlsZXMgKi8KYm9keSB7Cglmb250OiA2Mi41JSBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cgl3aWR0aDogNzgwcHg7CgltYXJnaW46IDAgYXV0bzsKfQoKaDIgewoJZm9udC1zaXplOiAxLjVlbTsKCWxpbmUtaGVpZ2h0OiAxLjVlbTsKCWZvbnQtZmFtaWx5OiBHZW9yZ2lhLCBUaW1lcywgc2VyaWY7Cn0KCnAgewoJbGluZS1oZWlnaHQ6IDEuNWVtOwp9CgphOmxpbmssIGE6dmlzaXRlZCB7Cgljb2xvcjogIzkwMDsKfQoKYTpob3ZlciwgYTphY3RpdmUgewoJY29sb3I6ICM3Nzc7Cn0KCgp1bC5yZXBvcnQgewoJZm9udC1zaXplOiAxLjRlbTsKCXdpZHRoOiA2ODBweDsKCW1hcmdpbjogMCBhdXRvOwoJcGFkZGluZzogMjBweCAyMHB4Owp9CgovKiBNZXRhZGF0YSB0YWJsZSAqLwp0YWJsZSB7Cglib3JkZXI6IDFweCAjY2NjIHNvbGlkOwoJb3ZlcmZsb3c6IGF1dG87Cgl3aWR0aDogMTAwJTsKCW1hcmdpbjogLjFlbSBhdXRvIC43NWVtOwoJcGFkZGluZzogMC41ZW07Cn0K">
+		<link rel="stylesheet" type="text/css" media="print" href="data:text/css;base64,Ym9keSB7Cglmb250OiAxMnB0ICJUaW1lcyBOZXcgUm9tYW4iLCBUaW1lcywgR2VvcmdpYSwgc2VyaWY7CgltYXJnaW46IDA7Cgl3aWR0aDogYXV0bzsKCWNvbG9yOiBibGFjazsKfQoKLyogUGFnZSBCcmVha3MgKHBhZ2UtYnJlYWstaW5zaWRlIG9ubHkgcmVjb2duaXplZCBieSBPcGVyYSkgKi8KaDEsIGgyLCBoMywgaDQsIGg1LCBoNiB7CglwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsKCXBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsKfQoKdWwsIG9sLCBkbCB7CglwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7Cgljb2xvci1hZGp1c3Q6IGV4YWN0Owp9CgpoMiB7Cglmb250LXNpemU6IDEuM2VtOwoJbGluZS1oZWlnaHQ6IDEuM2VtOwp9CgphIHsKCWNvbG9yOiAjMDAwOwoJdGV4dC1kZWNvcmF0aW9uOiBub25lOwp9Cg==">
+	</head>
+	<body>
+		<ul class="report combineChildItems">
+			<li id="item_VW3YQTUZ" class="item conferencePaper">
+			<h2>Automatic speech recognition models: A characteristic and performance review</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Conference Paper</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>U. G. Patil</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>S. D. Shirbahadurkar</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>A. N. Paithane</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This paper presents a review on few notable speech recognition
+ models that are reported in the last decade. Firstly, the models are 
+categorized into sparse models, learning models and domain - specific 
+models. Subsequently, the characteristics of the models have been 
+observed using speech constraints, algorithmic constraints and 
+performance constraints. The performance of these models reported in the
+ literature is investigated and the findings are summarized. Eventually,
+ the research gaps revealed by the literature are discussed and the need
+ for Hindi based speech recognition system is substantiated.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>August 2016</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Automatic speech recognition models</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1-7</td>
+					</tr>
+					<tr>
+					<th>Proceedings Title</th>
+						<td>2016 International Conference on Computing Communication Control and automation (ICCUBEA)</td>
+					</tr>
+					<tr>
+					<th>Conference Name</th>
+						<td>2016 International Conference on Computing Communication Control and automation (ICCUBEA)</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/ICCUBEA.2016.7860105">10.1109/ICCUBEA.2016.7860105</a></td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/30/2021, 11:35:34 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/30/2021, 11:35:34 AM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>accuracy</li>
+					<li>Acoustics</li>
+					<li>Adaptation models</li>
+					<li>Covariance matrices</li>
+					<li>Hidden Markov models</li>
+					<li>Hindi</li>
+					<li>model</li>
+					<li>recognition</li>
+					<li>sparse</li>
+					<li>speech</li>
+					<li>Speech</li>
+					<li>Speech recognition</li>
+					<li>training</li>
+					<li>Training</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_8QRXV3S6">IEEE Xplore Abstract Record					</li>
+					<li id="item_ZMI339WA">patil et al_2016_automatic speech recognition models.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_A2XZPLT4" class="item conferencePaper">
+			<h2>Brain-computer interface technology for speech recognition: A review</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Conference Paper</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Mashael M. AlSaleh</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Mahnaz Arvaneh</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Heidi Christensen</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Roger K. Moore</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This paper presents an overview of the studies that have been 
+conducted with the purpose of understanding the use of brain signals as 
+input to a speech recogniser. The studies have been categorised based on
+ the type of the technology used with a summary of the methodologies 
+used and achieved results. In addition, the paper gives an insight into 
+some studies that examined the effect of the chosen stimuli on brain 
+activities as an important factor in the recognition process. The 
+remaining part of this paper lists the limitations of the available 
+studies and the challenges for future work in this area.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>12/2016</td>
+					</tr>
+					<tr>
+					<th>Language</th>
+						<td>en</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>Brain-computer interface technology for speech recognition</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>DOI.org (Crossref)</td>
+					</tr>
+					<tr>
+					<th>URL</th>
+						<td><a href="http://ieeexplore.ieee.org/document/7820826/">http://ieeexplore.ieee.org/document/7820826/</a></td>
+					</tr>
+					<tr>
+					<th>Accessed</th>
+						<td>3/30/2021, 11:31:46 AM</td>
+					</tr>
+					<tr>
+					<th>Place</th>
+						<td>Jeju, South Korea</td>
+					</tr>
+					<tr>
+					<th>Publisher</th>
+						<td>IEEE</td>
+					</tr>
+					<tr>
+					<th>ISBN</th>
+						<td>978-988-14768-2-1</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1-5</td>
+					</tr>
+					<tr>
+					<th>Proceedings Title</th>
+						<td>2016 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA)</td>
+					</tr>
+					<tr>
+					<th>Conference Name</th>
+						<td>2016 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA)</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/APSIPA.2016.7820826">10.1109/APSIPA.2016.7820826</a></td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/30/2021, 11:31:46 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/30/2021, 11:31:47 AM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_NDPN7PJA">AlSaleh et al. - 2016 - Brain-computer interface technology for speech rec.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_T45Y5DHA" class="item conferencePaper">
+			<h2>Passive UHF RFID backscattering for indoor lighting control</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Conference Paper</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>G. Andia Vera</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>S. D. Nawale</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>S. Tedjini</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>Y. Duroc</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This paper proposes the use of a passive RFID light sensor in a
+ daylight-adaptive lighting system. In such a system, the dimming levels
+ of light sources are adapted to changing daylight such that a desired 
+illuminance distribution is achieved at the place. The system is 
+composed by photo-sensible passive RFID tags used as light sensor nodes 
+and RFID readers connected to a central controller. The use of the 
+passive UHF RFID technology avoids the use of complex feedback light 
+control algorithms as also simplify the deployment of the sensor 
+network. Experimental results showed the proposed solution. The light 
+variations can be sensed with high resolution having completely passive 
+and wireless sensors.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>December 2014</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>ISSN: 2325-9418</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>1-4</td>
+					</tr>
+					<tr>
+					<th>Proceedings Title</th>
+						<td>2014 Annual IEEE India Conference (INDICON)</td>
+					</tr>
+					<tr>
+					<th>Conference Name</th>
+						<td>2014 Annual IEEE India Conference (INDICON)</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/INDICON.2014.7030472">10.1109/INDICON.2014.7030472</a></td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/30/2021, 11:36:10 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/30/2021, 11:36:10 AM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Color</li>
+					<li>Indoor lighting control</li>
+					<li>Passive RFID tags</li>
+					<li>Photodiodes</li>
+					<li>Sensitivity</li>
+					<li>UHF RFID</li>
+					<li>Wireless communication</li>
+					<li>wireless power transmission</li>
+					<li>Wireless sensor networks</li>
+					<li>wireless sensor nodes</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_DEC4KKA9">IEEE Xplore Abstract Record					</li>
+					<li id="item_QEFKVUHP">vera et al_2014_passive uhf rfid backscattering for indoor lighting control.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_9KHGC7MF" class="item journalArticle">
+			<h2>PiCode: A New Picture-Embedding 2D Barcode</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>C. Chen</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>W. Huang</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>B. Zhou</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>C. Liu</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>W. H. Mow</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Nowadays, 2D barcodes have been widely used as an interface to
+ connect potential customers and advertisement contents. However, the 
+appearance of a conventional 2D barcode pattern is often too obtrusive 
+for integrating into an aesthetically designed advertisement. Besides, 
+no human readable information is provided before the barcode is 
+successfully decoded. This paper proposes a new picture-embedding 2D 
+barcode, called PiCode, which mitigates these two limitations by 
+equipping a scannable 2D barcode with a picturesque appearance. PiCode 
+is designed with careful considerations on both the perceptual quality 
+of the embedded image and the decoding robustness of the encoded 
+message. Comparisons with the existing beautified 2D barcodes show that 
+PiCode achieves one of the best perceptual qualities for the embedded 
+image, and maintains a better tradeoff between image quality and 
+decoding robustness in various application conditions. PiCode has been 
+implemented in the MATLAB on a PC and some key building blocks have also
+ been ported to Android and iOS platforms. Its practicality for 
+real-world applications has been successfully demonstrated.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>August 2016</td>
+					</tr>
+					<tr>
+					<th>Short Title</th>
+						<td>PiCode</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Transactions on Image Processing</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>25</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>3444-3458</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Transactions on Image Processing</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/TIP.2016.2573592">10.1109/TIP.2016.2573592</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>8</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1941-0042</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/30/2021, 11:34:24 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/30/2021, 11:34:24 AM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>2D barcode</li>
+					<li>Decoding</li>
+					<li>decoding robustness</li>
+					<li>Demodulation</li>
+					<li>Distortion</li>
+					<li>embedded picture</li>
+					<li>Error correction codes</li>
+					<li>Mobile communication</li>
+					<li>perceptual quality</li>
+					<li>Robustness</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_4CNRAGNR">chen et al_2016_picode.pdf					</li>
+					<li id="item_P4ERI8VJ">IEEE Xplore Abstract Record					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_GYJ5JFJR" class="item conferencePaper">
+			<h2>Review of various approaches towards speech recognition</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Conference Paper</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>A. V. Jadhav</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>R. V. Pawar</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>Speech recognition is an important application that enables 
+interaction of human beings with machines. The various stages in speech 
+recognition system are pre-emphasis, feature extraction and recognition 
+stage. This paper emphasizes on existing techniques in each of these 
+stages of speech recognition system and elaborates on their comparison.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>February 2012</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>99-103</td>
+					</tr>
+					<tr>
+					<th>Proceedings Title</th>
+						<td>2012 International Conference on Biomedical Engineering (ICoBE)</td>
+					</tr>
+					<tr>
+					<th>Conference Name</th>
+						<td>2012 International Conference on Biomedical Engineering (ICoBE)</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/ICoBE.2012.6178963">10.1109/ICoBE.2012.6178963</a></td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/30/2021, 11:34:58 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/30/2021, 11:34:58 AM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Dynamic Time Warping(DTW)</li>
+					<li>Feature extraction</li>
+					<li>Fixed Frame Size and Rate (FFSR)</li>
+					<li>Hidden Markov model(HMM)</li>
+					<li>Hidden Markov models</li>
+					<li>Mel frequency cepstral coefficient</li>
+					<li>Multiple Frame Size and Rate (MFSR)</li>
+					<li>Noise</li>
+					<li>Speech</li>
+					<li>Speech recognition</li>
+					<li>Training</li>
+					<li>Variable Frame size and Rate (VFSR)</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_YX9333UJ">IEEE Xplore Abstract Record					</li>
+					<li id="item_6SJ2VGUF">jadhav&amp;pawar_2012_review of various approaches towards speech recognition.pdf					</li>
+				</ul>
+			</li>
+
+
+			<li id="item_3A5EF3LE" class="item journalArticle">
+			<h2>RFID Backscattering in Long-Range Scenarios</h2>
+				<table>
+					<tbody><tr>
+						<th>Type</th>
+						<td>Journal Article</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>F. Amato</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>H. M. Torun</td>
+					</tr>
+					<tr>
+						<th class="author">Author</th>
+						<td>G. D. Durgin</td>
+					</tr>
+					<tr>
+					<th>Abstract</th>
+						<td>This paper presents a 5.8-GHz RFID tag that, by exploiting the
+ quantum tunneling effect, significantly increases the range of 
+backscatter radio links. We present an electronically simple Tunneling 
+RFID Tag characterized by return gains as high as 35 dB with link 
+sensitivity as low as -81 dBm. Without relevant increase in power 
+consumption, the tunneling tag enables a host of new wireless sensors 
+and Internet of Things applications that require both the long range of 
+conventional wireless links and the low power consumption of 
+semi-passive RFID devices. Selected measurements demonstrate a 
+reader-to-tag separation distance 10 times higher than the maximum range
+ of ideal semi-passive tags. Moreover, the collected experimental 
+results allowed to outline a mathematical model demonstrating how the 
+long-range RFID tag prototype can achieve distances unusual for this 
+technology.</td>
+					</tr>
+					<tr>
+					<th>Date</th>
+						<td>April 2018</td>
+					</tr>
+					<tr>
+					<th>Library Catalog</th>
+						<td>IEEE Xplore</td>
+					</tr>
+					<tr>
+					<th>Extra</th>
+						<td>Conference Name: IEEE Transactions on Wireless Communications</td>
+					</tr>
+					<tr>
+					<th>Volume</th>
+						<td>17</td>
+					</tr>
+					<tr>
+					<th>Pages</th>
+						<td>2718-2725</td>
+					</tr>
+					<tr>
+					<th>Publication</th>
+						<td>IEEE Transactions on Wireless Communications</td>
+					</tr>
+					<tr>
+					<th>DOI</th>
+						<td><a href="http://doi.org/10.1109/TWC.2018.2801803">10.1109/TWC.2018.2801803</a></td>
+					</tr>
+					<tr>
+					<th>Issue</th>
+						<td>4</td>
+					</tr>
+					<tr>
+					<th>ISSN</th>
+						<td>1558-2248</td>
+					</tr>
+					<tr>
+					<th>Date Added</th>
+						<td>3/30/2021, 11:33:06 AM</td>
+					</tr>
+					<tr>
+					<th>Modified</th>
+						<td>3/30/2021, 11:33:06 AM</td>
+					</tr>
+				</tbody></table>
+				<h3 class="tags">Tags:</h3>
+				<ul class="tags">
+					<li>Antenna measurements</li>
+					<li>Backscatter</li>
+					<li>backscattering</li>
+					<li>Frequency modulation</li>
+					<li>Internet of Things</li>
+					<li>IoT</li>
+					<li>long-range backscattering</li>
+					<li>low-powered RFID</li>
+					<li>Microwave measurement</li>
+					<li>modulation factor</li>
+					<li>Radiofrequency identification</li>
+					<li>reflection amplifier</li>
+					<li>RFID</li>
+					<li>tunnel diode</li>
+					<li>Tunneling</li>
+					<li>tunneling reflector</li>
+					<li>tunneling tag</li>
+				</ul>
+				<h3 class="attachments">Attachments</h3>
+				<ul class="attachments">
+					<li id="item_7YWJ4FPT">amato et al_2018_rfid backscattering in long-range scenarios.pdf					</li>
+				</ul>
+			</li>
+
+		</ul>
+	
+</body></html>
